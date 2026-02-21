@@ -9,11 +9,14 @@
     src: url(fontes/Benguiat\ Bold.ttf);
 }
 
+html, body {
+overflow-x: hidden !important;
+}
+
 body {
     background-color: #0C0102;
     color: rgb(255, 255, 255, 0.9);
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
 }
 
 button {
@@ -301,141 +304,152 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    section {
+@media (max-width: 600px){
+
+    section{
         padding: 4vw;
     }
-        header {
-            h2 {
-                font-size: 6vw;
-                font-weight: 500;
-            }
-        }
 
+    h2{
+        font-size: 6vw;
+    }
+
+    header h2{
+        font-size: 28px;
+    }
     .hero {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 4vw 4vw 4vw;
-
-    .esquerda, .direita {
-        width: 100%;
-    }
-
-    .esquerda {
-        margin-top: 160px;
-
-        h1 {
-            font-size: 8vw;
-        }
-    }
-
-    .direita {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-top: 150px;
+        padding: 26% 4vw 0;
 
-        p {
-            font-size: 4vw;
-            text-align: center;
-        }
-
-        button {
-            justify-content: center;
-        }
-    }
-}
-
-    .secaocCidade .titulo {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-
-        h2{
-            font-size: 6vw;
-        }
-        
-    }
-
-    .secaocCidade .cards {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .secaocCidade .cards .card {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: end;
-        
-    }
-
-    .secaoDepoimentos .depoimentos {
-        flex-direction: column;
-        width: 100%;
-        gap: 40px;
-    }
-
-    .secaoDepoimentos .depoimentos .depoimento {
-        flex-direction: column;
-        width: 100%;
-        gap: 40px;
-    }
-
-    .secaoObrigado {
-        h2 {
-            margin-top: 8vw;
-            text-align: center;
-            font-size: 6vw;
-        }
-        
-        ul {
-            overflow: hidden;
-            width: max-content;
-            display: flex;
-            gap: 20px;
-            padding-left: 18vw;
-            animation: scroll 19s linear infinite;
-        }
-    }
-    @keyframes scroll {
-        100% {
-            transform: translateX(-77%);
-        }
-    }
-
-    footer .conteudoFooter {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-
-        .logoFooter {
+        .esquerda, .direita {
             width: 100%;
-            text-align: center;
-            h3 {
-                justify-content: center;
-                font-size: 4vw;
+        }
+
+        .esquerda {
+            h3, h1{
+                text-align: center;
             }
 
-            h2 {
-                justify-content: center;
-                font-size: 8vw;
+            h1{
+                font-size: 12vw;
             }
         }
 
-        .secoesFooter {
-            justify-content: center;
-            gap: 20px;
+        .direita {
+            align-items: start;
+            p{
+                font-size: 5vw;
+                text-align: start;
+                margin-bottom: 16px;
+            }
         }
     }
 
-    footer .logotiposFooter {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        padding: 0 4vw 4vw 4vw;
+    .secaocCidade{
+        margin-top: 80px;
+        button{
+            display: none;
+        }
         
+        .cards{
+            margin-top: 20px;
+            flex-direction: column;
+            gap: 20px;
+
+
+            .card{
+                width: 100%;
+            }
+        }
+    }
+
+    .secaoDepoimentos{
+        .logotipos{
+            img:nth-child(1), img:nth-child(3){
+                width: 20%;
+            }
+            img:nth-child(2){
+                width: 40%;
+            }
+        }
+
+        .depoimentos{
+            flex-direction: column;
+            gap: 48px;
+
+            .depoimento{
+                width:100%;
+            }
+        }
+
+    }
+
+    .secaoObrigado{
+        margin: 40px 0px 60px;
+        h2{
+            text-align: center;
+        }
+        ul{
+            width: max-content;
+            gap: 32px;
+            mix-blend-mode: color-dodge;
+            animation: textoInfinito 20s infinite linear;
+            padding-left: 8vw;
+        }
+    }
+
+    footer{
+        padding-top: 50px;
+        .conteudoFooter{
+            padding: 4vw;
+            flex-direction: column;
+
+            .logoFooter{
+                width: 100%;
+
+                h2,
+                h3{
+                    text-align: center;
+                }
+                h2{
+                    font-size: 12vw;
+                }
+            }
+
+            .secoesFooter{
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: start;
+
+                .social{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 40px 0px 32px;
+                }
+
+                .institucional{
+                    width: 40%;
+                }
+
+                .parceiro{
+                    width: 50%;
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .logotiposFooter{
+            margin-top: 40%;
+        }
+
+        .textoInfinito h3{
+            font-size: 20vw;
+        }
     }
 }
