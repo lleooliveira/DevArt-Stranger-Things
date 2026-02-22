@@ -176,16 +176,20 @@ ul{
             align-items: end;
             justify-content: space-between;
             padding: 20px;
-            border-radius: 20px;
+            border-radius: 18px;
+            cursor: pointer;
 
-            transition: 
-                box-shadow 0.5s ease,
-                transform 0.5s ease;
+            /* 
+                transition: 
+                    box-shadow 0.5s ease,
+                    transform 0.5s ease;
+
                 &:hover {
-                box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-                transform: translateY(-5px);
-                cursor: pointer;
+                    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+                    transform: translateY(-5px);
+                    cursor: pointer;
                 }
+                */
         }
 
         .card:nth-child(2){
@@ -352,6 +356,8 @@ footer {
     header h2{
         font-size: 28px;
     }
+
+
     .hero {
         flex-direction: column;
         padding: 26% 4vw 0;
@@ -385,6 +391,7 @@ footer {
         button{
             display: none;
         }
+    
         
         .cards{
             margin-top: 20px;
