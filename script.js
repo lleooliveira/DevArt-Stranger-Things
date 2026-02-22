@@ -84,7 +84,7 @@ gsap.from(".secaoObrigado h2", {
     scrollTrigger: {
         trigger: ".secaoObrigado h2",
         markers: false,
-        start: "0% 90%",
+        start: "0% 80%",
         end: "100% 40%",
         scrub: 2
     }
@@ -98,7 +98,7 @@ gsap.from(".secaoObrigado ul li", {
     scrollTrigger: {
         trigger: ".secaoObrigado ul",
         markers: false,
-        start: "0% 80%",
+        start: "0% 70%",
         end: "100% 50%",
         scrub: 2
     }   
@@ -120,4 +120,8 @@ gsap.from("footer", {
     }
 })
 
-//
+// LETRAS ANIMADAS
+
+SplitText.create(".split", {
+    
+})
