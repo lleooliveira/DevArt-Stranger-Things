@@ -3,7 +3,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 ScrollSmoother.create({
-    smoth: 5,
+    smoth: 6,
     effects: true
 })
 
@@ -75,6 +75,20 @@ gsap.from("picture:nth-child(1)", {
     });
 });
 
+// ANIMAÇÃO SEÇÃO OBRIGADO
+
+gsap.from(".secaoObrigado h2", {
+    opacity: 0,
+    y: 30,
+    stagger: .1,
+    scrollTrigger: {
+        trigger: ".secaoObrigado h2",
+        markers: false,
+        start: "0% 90%",
+        end: "100% 40%",
+        scrub: 2
+    }
+})
 
 gsap.from(".secaoObrigado ul li", {
     opacity: 0,
@@ -90,3 +104,20 @@ gsap.from(".secaoObrigado ul li", {
     }   
 
 })
+
+
+// ANIMAÇOES FOOTER
+
+gsap.from("footer", {
+    y: "-30%",
+    inmediateRender: false,
+    scrollTrigger: {
+        trigger: "footer",
+        markers: false,
+        scrub: 2,
+        invalidateOnRefresh: true,
+        end: "100% 100%"
+    }
+})
+
+//
