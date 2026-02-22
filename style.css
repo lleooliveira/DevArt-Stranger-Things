@@ -68,6 +68,9 @@ button {
     background-image: url('imagens/bg-sec2.webp');
     background-position: center;
     background-size: cover;
+    z-index: 2;
+    position: relative;
+    background-color: #0C0102;
 }
 
 ul{
@@ -148,6 +151,7 @@ ul{
 
 .secaocCidade{
     flex-direction: column;
+    position: relative;
 
     .titulo {
         display: flex;
