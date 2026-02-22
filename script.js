@@ -34,7 +34,7 @@ gsap.from("picture:nth-child(1)", {
 
     gsap.from(".card", {
     opacity: 0,
-    y: 30,
+    y: 40,
     filter: "blur(10px)",
     stagger: .4,
     scrollTrigger: {
@@ -79,12 +79,12 @@ gsap.from("picture:nth-child(1)", {
 
 gsap.from(".secaoObrigado h2", {
     opacity: 0,
-    y: 30,
+    y: 40,
     stagger: .1,
     scrollTrigger: {
         trigger: ".secaoObrigado h2",
         markers: false,
-        start: "0% 80%",
+        start: "0% 90%",
         end: "100% 40%",
         scrub: 2
     }
@@ -98,7 +98,7 @@ gsap.from(".secaoObrigado ul li", {
     scrollTrigger: {
         trigger: ".secaoObrigado ul",
         markers: false,
-        start: "0% 70%",
+        start: "0% 80%",
         end: "100% 50%",
         scrub: 2
     }   
