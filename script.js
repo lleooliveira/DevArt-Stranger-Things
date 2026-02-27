@@ -10,7 +10,8 @@ ScrollSmoother.create({
 
 
 
-// ANIMAÇÃO HERO
+function animarPagina(){
+    // ANIMAÇÃO HERO
 
 gsap.from(".hero", {
     opacity: 0,
@@ -46,6 +47,9 @@ gsap.from("picture:nth-child(1)", {
     }
 });
 
+// ANIMAÇÃO HOVER CARDS
+/*
+
     const cards = document.querySelectorAll(".card");
 
     cards.forEach(card => {
@@ -73,7 +77,7 @@ gsap.from("picture:nth-child(1)", {
         overwrite: "auto"
         });
     });
-});
+});*/
 
 // ANIMAÇÃO SEÇÃO OBRIGADO
 
@@ -122,6 +126,51 @@ gsap.from("footer", {
 
 // LETRAS ANIMADAS
 
-SplitText.create(".split", {
-    
-})
+// SELECIONE TODOS OS ELEMENTOS COM A CLASSE ".textoSplit"
+const grupoTextoSplit = document.querySelectorAll(".textoSplit");
+
+// ANIMAR CADA ELEMENTO DESSE GRUPAMENTO -> forEach
+grupoTextoSplit.forEach((textoUnicoSplit) => {
+    const split = SplitText.create(textoUnicoSplit, {
+    type: "lines, words, chars",
+    mask: "lines"
+});
+
+gsap.from(split.chars, {
+    y: 40,
+    opacity: 0,
+    duration: .5,
+    stagger: .05,
+    scrollTrigger: {
+        trigger: textoUnicoSplit,
+        markers: false
+    }
+});
+});
+}
+
+// PRELOADER --> CRIA TIME LINE
+
+const tl = gsap.timeline({
+    onComplete(){
+        gsap.to("#preloader", {
+            opacity: 0,
+            display: "none"
+        })
+        animarPagina();
+    }
+});
+
+tl.to("#preloader path", {
+    duration: 3,
+    strokeDashoffset: 0
+});
+
+tl.to("#preloader path", {
+    fill: "rgb(168, 19, 19)",
+    duration: 3,
+    strokeDashoffset: 0
+});
+
+
+
