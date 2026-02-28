@@ -3,7 +3,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 ScrollSmoother.create({
-    smoth: 6,
+    smooth: 2,
     effects: true
 })
 
